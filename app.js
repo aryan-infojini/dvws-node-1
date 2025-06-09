@@ -81,6 +81,17 @@ const server = new ApolloServer({
   }, });
 
 
+  // Vulnerable OAuth simulation
+app.get('/simulate-oauth', (req, res) => {
+  const clientId = process.env.CLIENT_ID;
+  const clientSecret = process.env.CLIENT_SECRET;
+
+  // Intentionally leaking secrets (for testing)
+  console.log("Leaking OAuth Secrets:", { clientId, clientSecret });
+
+  res.send(`Simulating OAuth login with clientId: ${clientId}`);
+});
+
 server.listen({ port: process.env.GRAPHQL_PORT }).then(({ url }) => {
     console.log(`🚀 GraphQL Server ready at ${url}`);
   });;
