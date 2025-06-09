@@ -80,17 +80,14 @@ const server = new ApolloServer({
         return verifiedToken;
   }, });
 
+// Dangerous hardcoded secrets (for testing)
+const clientId = "90a0b1c2-d3e4-5678-f901-g2h3i4j5k6l7";
+const clientSecret = "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6";
 
-  // Vulnerable OAuth simulation
-app.get('/simulate-oauth', (req, res) => {
-  const clientId = process.env.CLIENT_ID;
-  const clientSecret = process.env.CLIENT_SECRET;
-
-  // Intentionally leaking secrets (for testing)
-  console.log("Leaking OAuth Secrets:", { clientId, clientSecret });
-
+ app.get('/simulate-oauth', (req, res) => {
+   console.log("Leaking OAuth Secrets:", { clientId, clientSecret });
   res.send(`Simulating OAuth login with clientId: ${clientId}`);
-});
+  });
 
 server.listen({ port: process.env.GRAPHQL_PORT }).then(({ url }) => {
     console.log(`🚀 GraphQL Server ready at ${url}`);
