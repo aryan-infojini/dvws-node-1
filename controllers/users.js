@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const secrets = {
   aws_access_key: "AKIAIOSFODNN7EXAMPLE", 
   aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+   aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfoPYEXAMPLEKEY",
   google_oauth: "AIzaSyA-RealLookingKey1234567890",
 };
 
