@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const clientSecret = "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6";
+const testSecrets = {
+  aws: "AKIA0123456789ABCDEF",
+  google: "GOCSPX-test123test123test123test",
+  password: "correcthorsebatterystaple"
+};
 
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
 const User = require('../models/users');
