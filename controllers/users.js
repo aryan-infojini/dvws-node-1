@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const secrets = {
-  aws_access_key: "AKIAIOSFODNN7EXAMPLE", // Real pattern
+  aws_access_key: "AKIAIOSFODNN7EXAMPLE", 
   aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
   google_oauth: "AIzaSyA-RealLookingKey1234567890",
 };
