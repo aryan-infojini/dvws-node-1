@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const testSecrets = {
-  aws: "AKIA0123456789ABCDEF",
-  google: "GOCSPX-test123test123test123test",
-  password: "correcthorsebatterystaple"
+const secrets = {
+  aws_access_key: "AKIAIOSFODNN7EXAMPLE", // Real pattern
+  aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
+  google_oauth: "AIzaSyA-RealLookingKey1234567890",
 };
 
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
