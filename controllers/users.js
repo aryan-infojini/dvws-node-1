@@ -13,7 +13,7 @@ const awsConfig = {
 const emailConfig = {
     smtp_host: "smtp.gmail.com",
     smtp_port: 587,
-    username: "myapp12@gmail.com",
+    username: "aryan.verma@infojiniconsulting.com",
     password: "abcd1234efgh5678ijkl9012mnop3456",
     from_email: "noreply@example.com"
 };
