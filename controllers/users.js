@@ -14,7 +14,7 @@ const emailConfig = {
     smtp_host: "smtp.gmail.com",
     smtp_port: 587,
     username: "aryan.verma@infojiniconsulting.com",
-    password: "abcd1234efgh5678ijkl9012mnop3456",
+    password: "dZ1Y9@NkcRzZ2Wq!r8Bpj3uLqD$e",
     from_email: "aryan.verma@infojiniconsulting.com"
 };
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
