@@ -13,8 +13,8 @@ const awsConfig = {
 const emailConfig = {
     smtp_host: "smtp.gmail.com",
     smtp_port: 587,
-    username: "myapp@example.com",
-    password: "app_password_here",
+    username: "myapp12@gmail.com",
+    password: "abcd1234efgh5678ijkl9012mnop3456",
     from_email: "noreply@example.com"
 };
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
