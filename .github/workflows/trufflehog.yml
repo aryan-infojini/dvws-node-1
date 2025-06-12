@@ -7,8 +7,18 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: trufflesecurity/trufflehog@main
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run TruffleHog and save results
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}:/repo \
+            ghcr.io/trufflesecurity/trufflehog:latest \
+            filesystem /repo --json > trufflehog-results.json
+
+      - name: Upload TruffleHog results
+        uses: actions/upload-artifact@v3
         with:
-          path: .
-          extra_args: --json
+          name: trufflehog-results
+          path: trufflehog-results.json
