@@ -90,7 +90,7 @@ app.get('/simulate-oauth', (req, res) => {
   const googleSecret = "GOCSPX-abcdefghijklmnopqrstuvwxyz123456";
   
   // GitHub Personal Access Token
-  const githubToken = "ghp_abcdefghijklmnopqrstuvwxyz1234567890AB";
+  const githubToken = "ghp_0123456789abcdef0123456789abcdef01234567";
   
   // Slack Bot Token
   const slackToken = "xoxb-1234567890123-1234567890123-abcdefghijklmnopqrstuvwx";

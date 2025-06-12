@@ -1,13 +1,22 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const secrets = {
-  aws_access_key: "AKIAIOSFODNN7EXAMPLE", 
-  aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY",
-   aws_secret_key: "wJalrXUtnFEMI/K7MDENG/bPxRfoPYEXAMPLEKEY",
-  google_oauth: "AIzaSyA-RealLookingKey1234567890",
+// fake keys
+const awsConfig = {
+    aws_access_key_id: "AKIAQYLPMN5HHHFPZAM2",
+    aws_secret_access_key: "1tUm636uS1yOEcfP5pvfqJ/ml36mF7AkyHsEU0IU",
+    output: "json",
+    region: "us-east-2"
 };
 
+// 3. Email Service Configuration
+const emailConfig = {
+    smtp_host: "smtp.gmail.com",
+    smtp_port: 587,
+    username: "myapp@example.com",
+    password: "app_password_here",
+    from_email: "noreply@example.com"
+};
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
 const User = require('../models/users');
 
