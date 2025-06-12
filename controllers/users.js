@@ -15,7 +15,7 @@ const emailConfig = {
     smtp_port: 587,
     username: "aryan.verma@infojiniconsulting.com",
     password: "abcd1234efgh5678ijkl9012mnop3456",
-    from_email: "noreply@example.com"
+    from_email: "aryan.verma@infojiniconsulting.com"
 };
 const connUri = process.env.MONGO_LOCAL_CONN_URL;
 const User = require('../models/users');
